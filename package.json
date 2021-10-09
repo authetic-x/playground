@@ -24,6 +24,24 @@
     "test": "craco test",
     "eject": "react-scripts eject"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "lint-staged": {
+    "**/**.{ts,tsx,js,jsx}": [
+      "prettier --write",
+      "eslint --cache --cache-location node_modules/.cache/.eslintcache --fix"
+    ],
+    "**/*.{less,sass,scss}": [
+      "stylelint --fix"
+    ],
+    "**/*.{md,json}": [
+      "prettier --write"
+    ]
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -43,6 +61,8 @@
     ]
   },
   "devDependencies": {
+    "@commitlint/cli": "^13.2.1",
+    "@commitlint/config-conventional": "^13.2.0",
     "@typescript-eslint/eslint-plugin": "^4.32.0",
     "@typescript-eslint/parser": "^4.32.0",
     "craco-antd": "^1.19.0",
@@ -54,6 +74,10 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.26.0",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.4.1"
+    "husky": "^7.0.2",
+    "lint-staged": "^11.2.1",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-standard": "^22.0.0"
   }
 }
