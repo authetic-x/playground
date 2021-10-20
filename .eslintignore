@@ -16,3 +16,5 @@ tsconfig.tsbuildinfo
 /**/lib/**
 /**/program/**
 /packages/dsp/src/static
+
+/shape-demo3
