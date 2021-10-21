@@ -1,30 +1,27 @@
 import React, { useState, useEffect } from 'react';
 import { Button } from 'antd';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import routes from './routes/config';
 import './App.less';
 
-const api = require('./mock/api.json')
+const api = require('./mock/api.json');
 
 function App() {
   const [list, setList] = useState([]);
 
   useEffect(() => {
-    setList(api.data)
+    setList(api.data);
   }, []);
 
   return (
     <div className="App">
-      <div className="header">
-        <span>Miss xx</span>
-      </div>
-
-      <div className="content">
-        {list.map((item: any) => (
-          <div className="list-item">
-            <span className="time">{item.time}</span>
-            <span className="text">{item.text}</span>
-          </div>
-        ))}
-      </div>
+      <Router>
+        <Switch>
+          {routes.map((route) => (
+            <Route path={route.path} component={route.component} />
+          ))}
+        </Switch>
+      </Router>
     </div>
   );
 }
