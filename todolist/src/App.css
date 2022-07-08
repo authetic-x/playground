@@ -1,0 +1,40 @@
+.todos > ul {
+  list-style: none;
+  margin: 24px 0px;
+  padding: 0;
+}
+
+.todo {
+  padding: 12px 16px;
+  text-align: center;
+  background-color: palevioletred;
+  color: aliceblue;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.todo:hover {
+  background-color: pink;
+}
+
+.todo-input-wrapper {
+  margin-top: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.todo-input {
+  width: 256px;
+  height: 24px;
+  border: 1px solid #ccc;
+}
+
+.todo-submit {
+  width: 96px;
+  height: 24px;
+  margin-top: 32px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
