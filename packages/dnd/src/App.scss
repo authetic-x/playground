@@ -1,0 +1,26 @@
+
+.page {
+  display: flex;
+  align-items: stretch;
+  width: 100vw;
+  height: 100vh;
+}
+
+.sidebar {
+  width: calc(25%);
+  border: 3px dashed pink;
+}
+
+.right-content {
+  flex: 1;
+  .header {
+    height: 48px;
+    border: 3px dashed blanchedalmond;
+  }
+
+  .editor-container {
+    height: calc(100% - 48px);
+    border: 3px dashed darkcyan;
+  }
+}
+
