@@ -19,8 +19,13 @@
   }
 
   .editor-container {
-    height: calc(100% - 48px);
+    height: calc(75% - 48px);
     border: 3px dashed darkcyan;
+  }
+
+  .timeline-container {
+    height: calc(25%);
+    border: 3px dashed palevioletred;
   }
 }
 

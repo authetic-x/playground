@@ -1,4 +1,5 @@
 import React from "react";
+import "./index.scss";
 
 const panelColors = [
   "#FF7F50",
@@ -10,14 +11,13 @@ const panelColors = [
   "#FFFACD",
   "#98FB98",
   "#FF69B4",
-  "#FFFFFF",
 ];
-function getRandomNumber(max: number) {
-  return Math.floor(Math.random() * max);
+function getRandomNumber(max: number, min = 0) {
+  return Math.floor(Math.random() * max) + min;
 }
 
 export function Panels() {
-  const panelCount = getRandomNumber(20);
+  const panelCount = getRandomNumber(20, 10);
   const panelItems = Array.from({ length: panelCount }).map(() => ({
     color: panelColors[getRandomNumber(panelColors.length)],
   }));

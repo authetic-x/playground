@@ -1,0 +1,10 @@
+.editor-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f1f1f1;
+
+  canvas {
+    background-color: #fff;
+  }
+}
