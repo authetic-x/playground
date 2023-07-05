@@ -1,5 +1,6 @@
-console.log("hello");
+import { AController, init } from "./app"
 
-function add() {
-  const a = 1;
-}
+const { app } = init([AController])
+const port = 8001
+app.listen(port)
+console.log(`app listen at port ${port}`)
