@@ -1,19 +1,18 @@
 {
-  "name": "playground",
+  "name": "simple-inversify@0.0.1",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "rimraf ./build && tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@typescript-eslint/parser": "^5.59.0",
-    "eslint": "^8.44.0",
-    "eslint-config-prettier": "^8.8.0",
-    "eslint-plugin-prettier": "^4.2.1",
-    "prettier": "^2.8.8"
+    "@types/node": "^20.3.3",
+    "rimraf": "^5.0.1",
+    "typescript": "^5.1.6"
   }
 }
