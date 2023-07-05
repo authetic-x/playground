@@ -1,6 +1,6 @@
 import React from "react";
 import "./index.scss";
 
-export function Timeline() {
+export default function Timeline() {
   return <div className="timeline-container"></div>;
 }

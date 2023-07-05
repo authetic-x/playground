@@ -1,19 +1,17 @@
-import React from "react";
-import { Panels } from "./components/panels";
-import { Editor } from "./components/editor";
-import { Timeline } from "./components/timeline";
+import React, { useEffect } from "react";
 import "./App.scss";
+import { initializeController } from "./initialize";
 
 function App() {
+  useEffect(() => {
+    initializeController.initialize();
+  });
+
   return (
     <div className="page">
-      <section className="sidebar">
-        <Panels />
-      </section>
+      <section className="sidebar"></section>
       <section className="right-content">
         <div className="header"></div>
-        <Editor />
-        <Timeline />
       </section>
     </div>
   );

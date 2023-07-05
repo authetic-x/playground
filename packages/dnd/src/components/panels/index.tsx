@@ -16,16 +16,23 @@ function getRandomNumber(max: number, min = 0) {
   return Math.floor(Math.random() * max) + min;
 }
 
-export function Panels() {
+export default function Panels() {
   const panelCount = getRandomNumber(20, 10);
   const panelItems = Array.from({ length: panelCount }).map(() => ({
     color: panelColors[getRandomNumber(panelColors.length)],
   }));
 
+  const onDragStart = () => {};
+
   return (
     <div className="panels">
       {panelItems.map((item) => (
-        <div className="panel" style={{ backgroundColor: item.color }}></div>
+        <div
+          className="panel"
+          draggable
+          style={{ backgroundColor: item.color }}
+          onDragStart={onDragStart}
+        ></div>
       ))}
     </div>
   );
